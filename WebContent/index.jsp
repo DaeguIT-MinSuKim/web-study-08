@@ -1,3 +1,4 @@
+<%@page import="web_study_08.ds.JdbcUtilJNDI"%>
 <%@page import="web_study_08.ds.JdbcUtil"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -11,5 +12,8 @@
 <body>
 	<c:set var="con" value="<%=JdbcUtil.getConnection() %>"></c:set>
 	<c:out value="${con}" ></c:out>
+	<br>
+	<c:set var="con1" value="<%=JdbcUtilJNDI.getConnection() %>"></c:set>
+	<c:out value="${con1}" ></c:out>
 </body>
 </html>

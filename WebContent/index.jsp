@@ -1,3 +1,5 @@
+<%@page import="web_study_08.ds.JdbcUtilJNDI3"%>
+<%@page import="web_study_08.ds.JdbcUtilJNDI2"%>
 <%@page import="web_study_08.ds.JdbcUtilJNDI"%>
 <%@page import="web_study_08.ds.JdbcUtil"%>
 <%@page import="java.sql.Connection"%>
@@ -12,8 +14,14 @@
 <body>
 	<c:set var="con" value="<%=JdbcUtil.getConnection() %>"></c:set>
 	<c:out value="${con}" ></c:out>
-	<br>
+<br>
 	<c:set var="con1" value="<%=JdbcUtilJNDI.getConnection() %>"></c:set>
 	<c:out value="${con1}" ></c:out>
+<br>
+	<c:set var="con2" value="<%=JdbcUtilJNDI2.getConnection() %>"></c:set>
+	<c:out value="${con2}" ></c:out>
+<br>
+	<c:set var="con3" value="<%=JdbcUtilJNDI3.getConnection() %>"></c:set>
+	<c:out value="${con3}" ></c:out>
 </body>
 </html>
